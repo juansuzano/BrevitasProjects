@@ -1,7 +1,7 @@
 import os
 
 #import numpy as np
-#import pandas as pd
+import pandas as pd
 
 import torch.nn.functional as F
 import torch.onnx
@@ -161,7 +161,7 @@ for each_sample in range(100):
 
 print('5. Generating submission file')
 
-model_path = "models/pytorch_LeNet/"
+model_path = "models/"
 if not os.path.exists(model_path):
 	os.makedirs(model_path)
 # submission = pd.DataFrame(final_prediction, dtype=int, columns=['ImageId', 'Label'])

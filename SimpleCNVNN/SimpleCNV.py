@@ -4,10 +4,10 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 
-import brevitas_export_onnx_dev.brevitas
-import brevitas_export_onnx_dev.brevitas.nn as qnn
-from brevitas_export_onnx_dev.brevitas.core.quant import QuantType
-import brevitas_export_onnx_dev.brevitas.onnx as bo
+import brevitas
+import brevitas.nn as qnn
+from brevitas.core.quant import QuantType
+import brevitas.onnx as bo
 
 class Net(nn.Module):   
 	def __init__(self):
@@ -57,7 +57,7 @@ net = Net()
 
 
 
-model_path = "models/pytorch_LeNet/"
+model_path = "models/"
 if not os.path.exists(model_path):
 	os.makedirs(model_path)
 # submission = pd.DataFrame(final_prediction, dtype=int, columns=['ImageId', 'Label'])

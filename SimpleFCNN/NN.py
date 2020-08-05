@@ -28,20 +28,6 @@ class SimpleNN(nn.Module):
 		return out
 
 
-# class SimpleNN(nn.Module):
-# 	def __init__(self):
-# 		super(SimpleNN, self).__init__()
-
-# 		self.conv1 = qnn.QuantConv2d(1, 6, 5, 
-# 									 weight_quant_type=QuantType.INT, 
-# 									 weight_bit_width=8 )
-# 		self.relu1 = qnn.QuantReLU(quant_type=QuantType.INT, bit_width=8, max_val=6)
-
-
-# 	def forward(self, x):
-# 		out = self.relu1(self.conv1(x))
-# 		return out
-
 
 net = SimpleNN()
 print(net)
